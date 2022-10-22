@@ -1,0 +1,8 @@
+C:\Users\Lenovo\Desktop\Project_OOP\Project_OOP\Project_OOP\obj\Debug\Manage_Station.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\Project_OOP\Project_OOP\Project_OOP\obj\Debug\Manage_Station.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Desktop\Project_OOP\Project_OOP\Project_OOP\obj\Debug\Manage_Station.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Project_OOP\Project_OOP\Project_OOP\bin\Debug\Project_OOP.exe.config
+C:\Users\Lenovo\Desktop\Project_OOP\Project_OOP\Project_OOP\bin\Debug\Project_OOP.exe
+C:\Users\Lenovo\Desktop\Project_OOP\Project_OOP\Project_OOP\bin\Debug\Project_OOP.pdb
+C:\Users\Lenovo\Desktop\Project_OOP\Project_OOP\Project_OOP\obj\Debug\Project_OOP.exe
+C:\Users\Lenovo\Desktop\Project_OOP\Project_OOP\Project_OOP\obj\Debug\Project_OOP.pdb
