@@ -46,6 +46,9 @@ namespace Manage_Station
                         xk.NhapNhieuXeKhach(k);
                         Console.WriteLine("\nThem xe khach thanh cong!");
                         break;
+                    case 7:
+                        break;
+                        //
                     case 8:
                         Console.WriteLine("\n Hien thi danh sach xe");
                         xt.ShowXeTai();
