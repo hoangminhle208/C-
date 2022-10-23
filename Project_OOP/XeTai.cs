@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_OOP
+namespace CUOI_KY
 {
-    internal class XeTai :Xe
+    internal class XeTai : Xe
     {
         //Fiedls
         private double trongTai;
@@ -61,7 +61,7 @@ namespace Project_OOP
         //nhap nhieu xe tai
         public void NhapNhieuXeTai(int n)
         {
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
                 Nhap1XeTai();
             }
@@ -70,7 +70,7 @@ namespace Project_OOP
         {
             // hien thi tieu de cot
             Console.WriteLine("{0, 5} {1, 10} {2, 15} {3, 20}{4, 25} ",
-                  "BIEN SO", "HANG", "TOC DO", "TRONG TAI","SO GHE");
+                  "BIEN SO", "HANG", "TOC DO", "TRONG TAI", "SO GHE");
             // hien thi danh sach xe
             if (ListXeTai != null && ListXeTai.Count > 0)
             {
@@ -82,6 +82,41 @@ namespace Project_OOP
             }
             Console.WriteLine();
         }
+        public void show1xetai(XeTai xt)
+        {
+            Console.WriteLine("{0, 5} {1, 10} {2, 15} {3, 20}{4, 25} ",
+                 "BIEN SO", "HANG", "TOC DO", "TRONG TAI", "SO GHE");
+            Console.WriteLine("{0, 5} {1, 10} {2, 15} {3, 20} ",
+                                     xt.BienSo, xt.Hang, xt.TocDo, xt.TrongTai);
+        }
+
+        public XeTai findBienSo(string bienSo)
+        {
+            XeTai xe = null;
+            if (ListXeTai != null && ListXeTai.Count > 0)
+            {
+                foreach (XeTai xt in ListXeTai)
+                {
+                    if (xt.BienSo == bienSo)
+                    {
+                        xe = xt;
+                    }
+                }
+            }
+            return xe;
+        }
+        public bool deleteByBienSo(string bienSo)
+        {
+            bool Isdeleted = false;
+            XeTai xe = findBienSo(bienSo);
+            if (xe != null)
+            {
+                Isdeleted = ListXeTai.Remove(xe);
+            }
+            return Isdeleted;
+
+        }
 
     }
+
 }

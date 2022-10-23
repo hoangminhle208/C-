@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Project_OOP")]
+[assembly: AssemblyTitle("CUOI_KY")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Project_OOP")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyCompany("HP")]
+[assembly: AssemblyProduct("CUOI_KY")]
+[assembly: AssemblyCopyright("Copyright © HP 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3e8e2985-77ed-4f03-8b2c-c000aaca17de")]
+[assembly: Guid("93509856-3ea2-4524-a15f-54a60d8a13a5")]
 
 // Version information for an assembly consists of the following four values:
 //

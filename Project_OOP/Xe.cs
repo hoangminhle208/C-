@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_OOP
+namespace CUOI_KY
 {
     abstract class Xe
     {
@@ -45,7 +45,9 @@ namespace Project_OOP
             Hang = "";
             SoLuong = 0;
         }
-        //protected void Nhap();
-        
+
+        //protected abstract void Nhap();
+
     }
+
 }

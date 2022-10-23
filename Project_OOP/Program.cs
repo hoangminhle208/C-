@@ -1,16 +1,16 @@
-﻿using Project_OOP;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Manage_Station
+namespace CUOI_KY
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+
             XeTai xt = new XeTai();
             XeKhach xk = new XeKhach();
             bool bol = true;
@@ -46,9 +46,38 @@ namespace Manage_Station
                         xk.NhapNhieuXeKhach(k);
                         Console.WriteLine("\nThem xe khach thanh cong!");
                         break;
-                    case 7:
+                    case 4:
+                        if (xt.SoLuongXeTai() > 0 || xk.SoLuongXeKhach() > 0)
+                        {
+                            string bS;
+                            Console.WriteLine("\n 4. Xoa xe theo bien so:");
+                            Console.WriteLine("\n nhap bien so :");
+                            bS = Convert.ToString(Console.ReadLine());
+                            if (xk.deleteByBienSo(bS) == true)
+                            {
+                                xk.ShowXeKhach();
+                            }
+                            if (xt.deleteByBienSo(bS) == true)
+                            {
+                                xt.ShowXeTai();
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n danh sach xe trong");
+                        }
                         break;
-                        
+                    case 5:
+                        string F;
+                        Console.WriteLine("\n 5. Tim kiem xe theo bien so.");
+                        Console.WriteLine("\n Nhap bien so xe can tim:");
+                        F = Convert.ToString(Console.ReadLine());
+                        if (xt.findBienSo(F) != null) xt.show1xetai(xt.findBienSo(F));
+                        if (xk.findBienSo(F) != null) xk.show1xekhach(xk.findBienSo(F));
+                        if ((xt.findBienSo(F) == null) && (xk.findBienSo(F) == null)) Console.WriteLine(" Khong co xe nay trong ben! ");
+                        break;
+
+
                     case 8:
                         Console.WriteLine("\n Hien thi danh sach xe");
                         xt.ShowXeTai();
@@ -61,4 +90,5 @@ namespace Manage_Station
             }
         }
     }
+    
 }

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_OOP
+namespace CUOI_KY
 {
-    internal class XeKhach:Xe
+    internal class XeKhach : Xe
     {
+
         //Fiedls
         private double soGhe;
 
@@ -16,7 +17,7 @@ namespace Project_OOP
         {
             get { return soGhe; }
             set { soGhe = value; }
-        } 
+        }
 
         //Constructor
         //public XeTai() { }
@@ -61,7 +62,7 @@ namespace Project_OOP
         //nhap nhieu xe khach
         public void NhapNhieuXeKhach(int n)
         {
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
                 Nhap1XeKhach();
             }
@@ -71,7 +72,7 @@ namespace Project_OOP
         {
             // hien thi tieu de cot
             //Console.WriteLine("{0, 5} {1, 10} {2, 15} {3, 20} ",
-                  //"BIEN SO", "HANG", "TOC DO", "SO GHE");
+            //"BIEN SO", "HANG", "TOC DO", "SO GHE");
             // hien thi danh sach xe
             if (ListXeKhach != null && ListXeKhach.Count > 0)
             {
@@ -83,6 +84,39 @@ namespace Project_OOP
                 }
             }
             Console.WriteLine();
+        }
+        public void show1xekhach(XeKhach xk)
+        {
+            Console.WriteLine("{0, 5} {1, 10} {2, 15} {3, 20}{4, 25} ",
+                 "BIEN SO", "HANG", "TOC DO", "TRONG TAI", "SO GHE");
+            Console.WriteLine($"{xk.BienSo,5}{xk.Hang,10}{xk.TocDo,15}{xk.SoGhe,45}");
+
+        }
+        public XeKhach findBienSo(string bienSo)
+        {
+            XeKhach xe = null;
+            if (ListXeKhach != null && ListXeKhach.Count > 0)
+            {
+                foreach (XeKhach xk in ListXeKhach)
+                {
+                    if (xk.BienSo == bienSo)
+                    {
+                        xe = xk;
+                    }
+                }
+            }
+            return xe;
+        }
+        public bool deleteByBienSo(string bienSo)
+        {
+            bool Isdeleted = false;
+            XeKhach xe = findBienSo(bienSo);
+            if (xe != null)
+            {
+                Isdeleted = ListXeKhach.Remove(xe);
+            }
+            return Isdeleted;
+
         }
     }
 }
