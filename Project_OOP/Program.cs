@@ -76,7 +76,9 @@ namespace CUOI_KY
                         if (xk.findBienSo(F) != null) xk.show1xekhach(xk.findBienSo(F));
                         if ((xt.findBienSo(F) == null) && (xk.findBienSo(F) == null)) Console.WriteLine(" Khong co xe nay trong ben! ");
                         break;
-
+                    case 7:
+                        break;
+                        //
 
                     case 8:
                         Console.WriteLine("\n Hien thi danh sach xe");
