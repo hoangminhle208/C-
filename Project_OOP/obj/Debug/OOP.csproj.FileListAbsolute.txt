@@ -1,0 +1,8 @@
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\bin\Debug\CUOI_KY.exe.config
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\bin\Debug\CUOI_KY.exe
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\bin\Debug\CUOI_KY.pdb
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\OOP.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\OOP.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\CUOI_KY.exe
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\CUOI_KY.pdb

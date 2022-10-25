@@ -69,7 +69,7 @@ namespace CUOI_KY
         public void ShowXeTai()
         {
             // hien thi tieu de cot
-            Console.WriteLine("{0, 5} {1, 10} {2, 15} {3, 20}{4, 25} ",
+            Console.WriteLine("{0, 5} {1, 10} {2, 15} {3, 20} {4, 25} ",
                   "BIEN SO", "HANG", "TOC DO", "TRONG TAI", "SO GHE");
             // hien thi danh sach xe
             if (ListXeTai != null && ListXeTai.Count > 0)
