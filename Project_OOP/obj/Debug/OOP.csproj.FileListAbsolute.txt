@@ -6,3 +6,6 @@ C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\OOP.csproj.SuggestedBindingRed
 C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\OOP.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\CUOI_KY.exe
 C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\CUOI_KY.pdb
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\bin\Debug\ConsoleTables.dll
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\bin\Debug\ConsoleTables.pdb
+C:\Users\Lenovo\Desktop\OOP\Project_OOP\obj\Debug\OOP.csproj.CopyComplete

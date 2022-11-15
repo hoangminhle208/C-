@@ -1,0 +1,8 @@
+C:\Users\Lenovo\Desktop\OOP\Nhom16_OOP\bin\Debug\Nhom16_OOP.exe.config
+C:\Users\Lenovo\Desktop\OOP\Nhom16_OOP\bin\Debug\Nhom16_OOP.exe
+C:\Users\Lenovo\Desktop\OOP\Nhom16_OOP\bin\Debug\Nhom16_OOP.pdb
+C:\Users\Lenovo\Desktop\OOP\Nhom16_OOP\obj\Debug\Nhom16_OOP.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\OOP\Nhom16_OOP\obj\Debug\Nhom16_OOP.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lenovo\Desktop\OOP\Nhom16_OOP\obj\Debug\Nhom16_OOP.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\OOP\Nhom16_OOP\obj\Debug\Nhom16_OOP.exe
+C:\Users\Lenovo\Desktop\OOP\Nhom16_OOP\obj\Debug\Nhom16_OOP.pdb

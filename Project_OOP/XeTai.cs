@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ConsoleTables;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,22 +24,14 @@ namespace CUOI_KY
         //public XeTai() { }
 
         //List xe tai
-        private List<XeTai> ListXeTai = null;
+        private static List<XeTai> ListXeTai = null;
         public XeTai()
         {
             ListXeTai = new List<XeTai>();
         }
 
         //Return so luong xe tai
-        public int SoLuongXeTai()
-        {
-            int Count = 0;
-            if (ListXeTai != null)
-            {
-                Count = ListXeTai.Count;
-            }
-            return Count;
-        }
+        
 
         //Nhap 1 xe tai
         public void Nhap1XeTai()
@@ -57,6 +51,7 @@ namespace CUOI_KY
             Console.WriteLine("------------------");
 
             ListXeTai.Add(xeTai);
+
         }
         //nhap nhieu xe tai
         public void NhapNhieuXeTai(int n)
@@ -115,6 +110,42 @@ namespace CUOI_KY
             }
             return Isdeleted;
 
+        }
+        //tao bang hien thi
+        public static DataTable DanhSachXeTai()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Biển số");
+            dt.Columns.Add("Hãng");
+            dt.Columns.Add("Tốc độ");
+            dt.Columns.Add("Trọng Tải");
+            foreach(XeTai xeTai in ListXeTai)
+            {
+                dt.Rows.Add(xeTai.BienSo,xeTai.Hang,xeTai.TocDo,xeTai.TrongTai);
+            }
+            return dt;
+        }
+        public static void Show()
+        {
+            Console.WriteLine("Danh sach xe tai\n");
+            Console.OutputEncoding = Encoding.UTF8;
+            var data = DanhSachXeTai();
+            string[] columnNames = data.Columns.Cast<DataColumn>()
+                                 .Select(x => x.ColumnName)
+                                 .ToArray();
+
+            DataRow[] rows = data.Select();
+
+            var table = new ConsoleTable(columnNames);
+            foreach (DataRow row in rows)
+            {
+                table.AddRow(row.ItemArray);
+            }
+            //table.Write(Format.MarkDown);
+            table.Write(Format.Alternative);
+            //table.Write(Format.Minimal);
+            //table.Write(Format.Default);
+            //Console.Read();
         }
 
     }

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ConsoleTables;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +10,7 @@ namespace CUOI_KY
 {
     internal class Program
     {
+        
         static void Main(string[] args)
         {
 
@@ -82,8 +85,7 @@ namespace CUOI_KY
 
                     case 8:
                         Console.WriteLine("\n Hien thi danh sach xe");
-                        xt.ShowXeTai();
-                        xk.ShowXeKhach();
+
                         break;
                     default:
                         bol = false;
