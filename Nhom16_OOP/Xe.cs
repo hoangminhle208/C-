@@ -8,21 +8,25 @@ namespace Nhom16_OOP
 {
     abstract class Xe
     {
+        //Fields
         private double tocDo;
         private string bienSo;
         private string hang;
         public static int soLuong;
 
+        //Properties
         public double TocDo { get { return tocDo; } set { tocDo = value; } }
         public string Hang { get { return hang; } set { hang = value; }}
         public string BienSo { get { return bienSo; } set { bienSo = value; } }
-        
+
+        //Constructor
         public Xe()
         {
             tocDo = 0;
             bienSo = "";
             hang = "";
         }
+        //Constructor
         public Xe(double tocDo,string bienSo,string hang)
         {
             TocDo = tocDo;
@@ -33,14 +37,15 @@ namespace Nhom16_OOP
         {
             do
             {
-                Console.WriteLine("Nhap toc do:");
+                Console.Write("Nhap toc do:");
                 TocDo = double.Parse(Console.ReadLine());
             }
             while (TocDo < 0);
-            Console.WriteLine("Nhap bien so:");
+            Console.Write("Nhap bien so:");
             BienSo=Convert.ToString(Console.ReadLine());
-            Console.WriteLine("Nhap hang: ");
+            Console.Write("Nhap hang: ");
             Hang= Convert.ToString(Console.ReadLine());
+            
         }
         public virtual void Xuat1Xe()
         {

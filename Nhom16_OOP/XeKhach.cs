@@ -9,7 +9,7 @@ namespace Nhom16_OOP
     class XeKhach:Xe
     {
         private int soGhe;
-        private static int soxk;
+        public static int soLuong;
 
         public int SoGhe { get { return soGhe; } set { soGhe = value; } }
 
@@ -27,10 +27,10 @@ namespace Nhom16_OOP
             base.Nhap1Xe();
             do
             {
-                Console.WriteLine("Nhap so ghe:");
+                Console.Write("Nhap so ghe:");
                 SoGhe = int.Parse(Console.ReadLine());
             } while(SoGhe < 0);
-            soxk++;
+            soLuong++;
         }
         public override void Xuat1Xe()
         {
@@ -39,7 +39,7 @@ namespace Nhom16_OOP
         }
         public override int Dem()
         {
-            return soLuong++;
+            return soLuong;
         }
     }
 }

@@ -21,7 +21,9 @@ namespace Nhom16_OOP
                 Console.WriteLine("**  3. Xoa xe theo bien so.                          **");
                 Console.WriteLine("**  4. Tim kiem tat ca xe .                          **");
                 Console.WriteLine("**  5. Thong ke.                                     **");
-                Console.WriteLine("**  6. Hien thi danh sach xe.                        **");
+                Console.WriteLine("**  6. Sua xe khach theo bien so.                    **");
+                Console.WriteLine("**  7. Sua xe tai theo bien so.                      **");
+                Console.WriteLine("**  8. Hien thi danh sach xe.                        **");
                 Console.WriteLine("**  0. Thoat                                         **");
                 Console.WriteLine("*******************************************************");
                 Console.Write("\tNhap tuy chon: ");
@@ -48,10 +50,20 @@ namespace Nhom16_OOP
                         break;
                     case 5:
                         Console.WriteLine("Thong ke");
-                        Console.Write("So xe tai: ",listxetai.Count);
-                        Console.Write("So xe khach: ", listxekhach.Count);
+                        Console.Write("So xe tai : ", XeTai.soLuong);
+                        Console.Write("So xe tai hien tai: ",listxetai.Count);
+                        Console.Write("So xe khach : ",XeKhach.soLuong);
+                        Console.Write("So xe khach hien tai: ", listxekhach.Count);
                         break;
                     case 6:
+                        Console.WriteLine("Sua xe khach theo bien so");
+                        SuaXeKhach();
+                        break;
+                    case 7:
+                        Console.WriteLine("Sua xe tai theo bien so");
+                        SuaXeTai();
+                        break;
+                    case 8:
                         Console.WriteLine("\n Hien thi danh sach xe");
                         Console.WriteLine("\n Danh sach xe tai");
                         DanhSachXeTai();
@@ -70,7 +82,7 @@ namespace Nhom16_OOP
         static List<XeKhach> listxekhach = new List<XeKhach>();
         static void NhapListXeTai()
         {
-            Console.WriteLine("Nhap so xe tai: ");
+            Console.Write("Nhap so xe tai: ");
             int n=int.Parse(Console.ReadLine());
             for(int i = 0; i < n; i++)
             {
@@ -83,7 +95,7 @@ namespace Nhom16_OOP
         //nhap xe khach va add vao list
         static void NhapListXeKhach()
         {
-            Console.WriteLine("Nhap so xe khach: ");
+            Console.Write("Nhap so xe khach: ");
             int n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++)
             {
@@ -97,11 +109,11 @@ namespace Nhom16_OOP
         static void DanhSachXeTai()
         {
             var table = new Table();
-            table.SetHeaders("STT","Bien so", "Hang", "Toc do","Trong tai");
+            table.SetHeaders("STT","Bien so", "Hang", "Toc do","Trong tai","Date");
             int i = 1;
             foreach(XeTai xt in listxetai)
             {
-                table.AddRow(i.ToString(),xt.BienSo, xt.Hang, xt.TocDo.ToString(), xt.TrongTai.ToString());
+                table.AddRow(i.ToString(),xt.BienSo, xt.Hang, xt.TocDo.ToString(), xt.TrongTai.ToString(), DateTime.Now.ToLongDateString());
                 i++;
             }
             Console.WriteLine(table.ToString());
@@ -110,11 +122,11 @@ namespace Nhom16_OOP
         static void DanhSachXeKhach()
         {
             var table = new Table();
-            table.SetHeaders("STT", "Bien so", "Hang", "Toc do", "So Ghe");
+            table.SetHeaders("STT", "Bien so", "Hang", "Toc do", "So Ghe","Date");
             int i = 1;
             foreach (XeKhach xk in listxekhach)
             {
-                table.AddRow(i.ToString(), xk.BienSo, xk.Hang, xk.TocDo.ToString(), xk.SoGhe.ToString());
+                table.AddRow(i.ToString(), xk.BienSo, xk.Hang, xk.TocDo.ToString(), xk.SoGhe.ToString(), DateTime.Now.ToLongDateString());
                 i++;
             }
             Console.WriteLine(table.ToString());
@@ -266,5 +278,46 @@ namespace Nhom16_OOP
             }
         }
         
+        public static void SuaXeTai()
+        {
+            Console.Write("nhap bien so:");
+            string k = Convert.ToString(Console.ReadLine());
+            foreach (XeTai xt in listxetai)
+            {
+                if (xt.BienSo.ToString() == k)
+                {
+                    Console.Write("nhap lai bien so moi:");
+                    xt.BienSo = Convert.ToString(Console.ReadLine());
+                    Console.Write("nhap lai hang moi:");
+                    xt.Hang=Convert.ToString(Console.ReadLine());
+                    Console.Write("nhap lai toc do :");
+                    xt.TocDo=double.Parse(Console.ReadLine());
+                    Console.Write("nhap lai trong tai:");
+                    xt.TrongTai=double.Parse(Console.ReadLine());
+                }
+                else Console.WriteLine("khong tim thay xe tai");
+            }
+        }
+
+        public static void SuaXeKhach()
+        {
+            Console.Write("nhap bien so:");
+            string k = Convert.ToString(Console.ReadLine());
+            foreach (XeKhach xk in listxekhach)
+            {
+                if (xk.BienSo.ToString() == k)
+                {
+                    Console.Write("nhap lai bien so moi:");
+                    xk.BienSo = Convert.ToString(Console.ReadLine());
+                    Console.Write("nhap lai hang moi:");
+                    xk.Hang = Convert.ToString(Console.ReadLine());
+                    Console.Write("nhap lai toc do :");
+                    xk.TocDo = double.Parse(Console.ReadLine());
+                    Console.Write("nhap lai so ghe:");
+                    xk.SoGhe = int.Parse(Console.ReadLine());
+                }
+                else Console.WriteLine("khong tim thay xe khach");
+            }
+        }
     }
 }

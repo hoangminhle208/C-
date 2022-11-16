@@ -1,8 +1,0 @@
-F:\HK1\CTDL GT\CUOI_KY\CUOI_KY\bin\Debug\CUOI_KY.exe.config
-F:\HK1\CTDL GT\CUOI_KY\CUOI_KY\bin\Debug\CUOI_KY.exe
-F:\HK1\CTDL GT\CUOI_KY\CUOI_KY\bin\Debug\CUOI_KY.pdb
-F:\HK1\CTDL GT\CUOI_KY\CUOI_KY\obj\Debug\CUOI_KY.csproj.AssemblyReference.cache
-F:\HK1\CTDL GT\CUOI_KY\CUOI_KY\obj\Debug\CUOI_KY.csproj.SuggestedBindingRedirects.cache
-F:\HK1\CTDL GT\CUOI_KY\CUOI_KY\obj\Debug\CUOI_KY.csproj.CoreCompileInputs.cache
-F:\HK1\CTDL GT\CUOI_KY\CUOI_KY\obj\Debug\CUOI_KY.exe
-F:\HK1\CTDL GT\CUOI_KY\CUOI_KY\obj\Debug\CUOI_KY.pdb

@@ -25,11 +25,11 @@ namespace Nhom16_OOP
         {
             base.Nhap1Xe();
             do {
-                Console.WriteLine("Nhap trong tai cua xe:");
+                Console.Write("Nhap trong tai cua xe:");
                 TrongTai = double.Parse(Console.ReadLine());
                }
             while (TrongTai < 0);
-            
+            soLuong++;
         }
         public override void Xuat1Xe()
         {
@@ -38,7 +38,7 @@ namespace Nhom16_OOP
         }
         public override int Dem()
         {
-            return soLuong++;
+            return soLuong;
         }
     }
 }
