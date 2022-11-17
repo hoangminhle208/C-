@@ -8,9 +8,29 @@ using ConsoleTable;
 namespace Nhom16_OOP
 {
     internal class Program
-    {
+    {  
+        static void TaoDuLieuMau()
+        {
+            XeTai xt=new XeTai(50,"78d1234","huynhdai",55.1);
+            listxetai.Add(xt);
+            XeTai xt1 = new XeTai(40, "66d7899", "kia", 40);
+            listxetai.Add(xt1);
+            XeTai xt2 = new XeTai(45.12, "99d1a", "container", 123.2);
+            listxetai.Add(xt2);
+            XeTai xt3 = new XeTai(41.1151, "155aa4", "diem my", 1.235);
+            listxetai.Add(xt3);
+            XeKhach xk=new XeKhach(125.4, "44a4a4", "tuan dat", 10);
+            listxekhach.Add(xk);
+            XeKhach xk1 = new XeKhach(21.24, "5a5aaa", "chi hung", 30);
+            listxekhach.Add(xk1);
+            XeKhach xk2 = new XeKhach(125.4, "zzz54", "phuong chi",45);
+            listxekhach.Add(xk2);
+            XeKhach xk3 = new XeKhach(44.5, "7a8sa8", "minh hoang", 50);
+            listxekhach.Add(xk3);
+        }
         static void Main(string[] args)
         {
+            TaoDuLieuMau();
             bool bol = true;
             while (bol)
             {
@@ -50,10 +70,10 @@ namespace Nhom16_OOP
                         break;
                     case 5:
                         Console.WriteLine("Thong ke");
-                        Console.Write("So xe tai : ", XeTai.soLuong);
-                        Console.Write("So xe tai hien tai: ",listxetai.Count);
-                        Console.Write("So xe khach : ",XeKhach.soLuong);
-                        Console.Write("So xe khach hien tai: ", listxekhach.Count);
+                        Console.Write($"So xe tai : {XeTai.soLuong} ");
+                        Console.WriteLine($"So xe tai hien tai: {listxetai.Count()}");
+                        Console.Write($"So xe khach {XeKhach.soLuong}: ");
+                        Console.Write($"So xe khach hien tai: {listxekhach.Count()}");
                         break;
                     case 6:
                         Console.WriteLine("Sua xe khach theo bien so");
@@ -80,6 +100,8 @@ namespace Nhom16_OOP
         static List<XeTai> listxetai = new List<XeTai>();
         //list xe khach
         static List<XeKhach> listxekhach = new List<XeKhach>();
+        
+        
         static void NhapListXeTai()
         {
             Console.Write("Nhap so xe tai: ");
@@ -143,7 +165,7 @@ namespace Nhom16_OOP
                 Console.WriteLine("Nhap 4 de tim theo trong tai(Xe Tai):");
                 Console.WriteLine("Nhap 5 de tim theo so ghe(Xe Khach):");
                 n = int.Parse(Console.ReadLine());
-            } while (n >= 1 && n <= 5);
+            } while (n < 1 && n > 5);
             if (n == 1)
             {
                 Console.Write("nhap bien so:");
@@ -241,7 +263,7 @@ namespace Nhom16_OOP
                 Console.WriteLine("danh sach xe tai can tim");
                 Console.WriteLine(t_xetai);
             }
-            else
+            if(n==5)
             {
                 Console.Write("nhap so ghe:");
                 int k = int.Parse(Console.ReadLine());
@@ -262,30 +284,35 @@ namespace Nhom16_OOP
         {
             Console.Write("nhap bien so:");
             string k = Convert.ToString(Console.ReadLine());
-            foreach (XeTai xt in listxetai)
+            listxetai.RemoveAll(l=>l.BienSo == k);
+
+            listxekhach.RemoveAll(l=>l.BienSo==k);
+            /**foreach (XeTai xt in listxetai.ToList())
             {
-                if (xt.BienSo.ToString() == k)
+                if (xt.BienSo == k)
                 {
                     listxetai.Remove(xt);
                 }
             }
             foreach (XeKhach xk in listxekhach)
             {
-                if (xk.BienSo.ToString() == k)
+                if (xk.BienSo == k)
                 {
                     listxekhach.Remove(xk);
                 }
-            }
+            }**/
         }
         
         public static void SuaXeTai()
         {
+            bool t=false;
             Console.Write("nhap bien so:");
             string k = Convert.ToString(Console.ReadLine());
             foreach (XeTai xt in listxetai)
             {
                 if (xt.BienSo.ToString() == k)
                 {
+                    t = true;
                     Console.Write("nhap lai bien so moi:");
                     xt.BienSo = Convert.ToString(Console.ReadLine());
                     Console.Write("nhap lai hang moi:");
@@ -297,16 +324,19 @@ namespace Nhom16_OOP
                 }
                 else Console.WriteLine("khong tim thay xe tai");
             }
+            if(t==true) Console.WriteLine("khong tim thay xe tai");
         }
 
         public static void SuaXeKhach()
         {
+            bool t=false;
             Console.Write("nhap bien so:");
             string k = Convert.ToString(Console.ReadLine());
             foreach (XeKhach xk in listxekhach)
             {
                 if (xk.BienSo.ToString() == k)
                 {
+                    t = true;
                     Console.Write("nhap lai bien so moi:");
                     xk.BienSo = Convert.ToString(Console.ReadLine());
                     Console.Write("nhap lai hang moi:");
@@ -316,8 +346,9 @@ namespace Nhom16_OOP
                     Console.Write("nhap lai so ghe:");
                     xk.SoGhe = int.Parse(Console.ReadLine());
                 }
-                else Console.WriteLine("khong tim thay xe khach");
+                
             }
+            if(t==true) Console.WriteLine("khong tim thay xe khach");
         }
     }
 }
