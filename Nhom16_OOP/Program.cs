@@ -11,6 +11,8 @@ namespace Nhom16_OOP
     {  
         static void TaoDuLieuMau()
         {
+            Xe xe1 = new XeTai(44,"aa","bb",54);
+            listxetai.Add((XeTai)xe1);
             XeTai xt=new XeTai(50,"78d1234","huynhdai",55.1);
             listxetai.Add(xt);
             XeTai xt1 = new XeTai(40, "66d7899", "kia", 40);
@@ -70,9 +72,11 @@ namespace Nhom16_OOP
                         break;
                     case 5:
                         Console.WriteLine("Thong ke");
-                        Console.Write($"So xe tai : {XeTai.soLuong} ");
+                        Xe x = new XeTai();
+                        x.ThongKe();
                         Console.WriteLine($"So xe tai hien tai: {listxetai.Count()}");
-                        Console.Write($"So xe khach {XeKhach.soLuong}: ");
+                        Xe y=new XeKhach();
+                        y.ThongKe();
                         Console.Write($"So xe khach hien tai: {listxekhach.Count()}");
                         break;
                     case 6:
@@ -284,6 +288,7 @@ namespace Nhom16_OOP
         {
             Console.Write("nhap bien so:");
             string k = Convert.ToString(Console.ReadLine());
+
             listxetai.RemoveAll(l=>l.BienSo == k);
 
             listxekhach.RemoveAll(l=>l.BienSo==k);

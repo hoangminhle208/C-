@@ -9,7 +9,7 @@ namespace Nhom16_OOP
     class XeTai:Xe
     {
         private double trongTai;
-        
+        private int soLuongXe=0;
         public double TrongTai { get { return trongTai; } set { trongTai = value; } }
         public XeTai():base()
         {
@@ -29,7 +29,7 @@ namespace Nhom16_OOP
                 TrongTai = double.Parse(Console.ReadLine());
                }
             while (TrongTai < 0);
-            soLuong++;
+            soLuongXe++;
         }
         public override void Xuat1Xe()
         {
@@ -38,7 +38,12 @@ namespace Nhom16_OOP
         }
         public override int Dem()
         {
-            return soLuong;
+            return soLuongXe;
+        }
+        public override void ThongKe()
+        {
+            string k=$"So xe tai: {Dem()}";
+            Console.WriteLine(k);
         }
     }
 }

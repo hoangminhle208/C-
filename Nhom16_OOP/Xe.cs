@@ -12,7 +12,7 @@ namespace Nhom16_OOP
         private double tocDo;
         private string bienSo;
         private string hang;
-        public static int soLuong;
+        public int soLuong;
 
         //Properties
         public double TocDo { get { return tocDo; } set { tocDo = value; } }
@@ -33,6 +33,7 @@ namespace Nhom16_OOP
             BienSo = bienSo;
             Hang = hang;
         }
+        //Nhap 1 xe
         public virtual void Nhap1Xe()
         {
             do
@@ -47,6 +48,7 @@ namespace Nhom16_OOP
             Hang= Convert.ToString(Console.ReadLine());
             
         }
+        //Xuat 1 xe
         public virtual void Xuat1Xe()
         {
             Console.WriteLine("Toc Do cua Xe:  {0} km/h", TocDo);
@@ -54,6 +56,7 @@ namespace Nhom16_OOP
             Console.WriteLine("Hang San Xuat cua Xe:  {0}", Hang);
         }
         public abstract int Dem();
-        
+
+        public abstract void ThongKe();
     }
 }

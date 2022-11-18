@@ -9,13 +9,13 @@ namespace Nhom16_OOP
     class XeKhach:Xe
     {
         private int soGhe;
-        public static int soLuong;
+        public  int soLuong;
 
         public int SoGhe { get { return soGhe; } set { soGhe = value; } }
 
         public XeKhach():base()
         {
-           SoGhe = 0;
+            SoGhe = 0;
         }
 
         public XeKhach(double tocDo, string bienSo, string hang,int soGhe) : base(tocDo, bienSo, hang)
@@ -40,6 +40,11 @@ namespace Nhom16_OOP
         public override int Dem()
         {
             return soLuong;
+        }
+        public override void ThongKe()
+        {
+            string k=$"So xe khach: {Dem()}";
+            Console.WriteLine(k);
         }
     }
 }
