@@ -12,7 +12,7 @@ namespace Nhom16_OOP
         private double tocDo;
         private string bienSo;
         private string hang;
-        public int soLuong;
+        public static int soLuong;
 
         //Properties
         public double TocDo { get { return tocDo; } set { tocDo = value; } }
@@ -55,8 +55,13 @@ namespace Nhom16_OOP
             Console.WriteLine("Bien So cua Xe:  {0}", BienSo);
             Console.WriteLine("Hang San Xuat cua Xe:  {0}", Hang);
         }
+        //ham ao
         public abstract int Dem();
-
+        //ham ao
         public abstract void ThongKe();
+        //ham ao
+        public abstract string XuatTrongTai();
+        //ham ao
+        public abstract string XuatSoGhe();
     }
 }
