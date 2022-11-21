@@ -9,6 +9,12 @@ namespace Nhom16_OOP
 {
     internal class Program
     {  
+        /* Danh sach thanh vien
+         * 20161317 - Le Minh Hoang
+         * 21110478 - Do Chi Hung
+         * 21110419 - Nguyen Tran Tuan Dat
+         * 21110549 - Nguyen Thuy Diem My
+         */
         static void TaoDuLieuMau() // tao du lieu mau de bo qua buoc nhap cho nhanh
         {
             Xe xe1 = new XeTai(44,"aa","bb",54);
