@@ -77,7 +77,9 @@ namespace Nhom16_OOP
                         break;
                     case 5:
                         Console.WriteLine("\n Thong ke");
-                        Console.WriteLine($"\n So xe hien tai: {listxe.Count()}");                     
+                        Console.WriteLine($"\n So xe hien tai: {listxe.Count()}");
+                        Console.WriteLine($"\n So xe khach:{XeKhach.SoLuongXeKhach}");
+                        Console.WriteLine($"\n So xe tai:{XeTai.SoLuongXeTai}");
                         break;
                     case 6:
                         Console.WriteLine("\n Sua xe theo bien so");

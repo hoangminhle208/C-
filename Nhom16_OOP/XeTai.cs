@@ -10,8 +10,10 @@ namespace Nhom16_OOP
     {
         //field
         private double trongTai;
+        private static int soLuongXeTai=0;
         //property
         public double TrongTai { get { return trongTai; } set { trongTai = value; } }
+        public static int SoLuongXeTai { get { return soLuongXeTai; } set { soLuongXeTai = value; } }
         //constructor
         public XeTai():base()
         {
@@ -31,7 +33,7 @@ namespace Nhom16_OOP
                 TrongTai = double.Parse(Console.ReadLine());
                }
             while (TrongTai < 0);
-            soLuong++;
+            SoLuongXeTai++;
         }
         //ham xuat xe
         public override void Xuat1Xe()
@@ -42,7 +44,7 @@ namespace Nhom16_OOP
         //ham dem so luong
         public override int Dem()
         {
-            return soLuong;
+            return SoLuongXeTai;
         }
         public override void ThongKe()
         {
