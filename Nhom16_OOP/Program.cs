@@ -68,19 +68,19 @@ namespace Nhom16_OOP
                         Console.WriteLine("\nThem xe khach thanh cong!");
                         break;
                     case 3:
-                        Console.WriteLine("Xoa xe theo bien so");
+                        Console.WriteLine("\n Xoa xe theo bien so");
                         Delete();
                         break;
                     case 4:
-                        Console.WriteLine("Tim kiem trong tat ca xe");
+                        Console.WriteLine("\n Tim kiem trong tat ca xe");
                         TimKiem();
                         break;
                     case 5:
-                        Console.WriteLine("Thong ke");
-                        Console.WriteLine($"So xe hien tai: {listxe.Count()}");                     
+                        Console.WriteLine("\n Thong ke");
+                        Console.WriteLine($"\n So xe hien tai: {listxe.Count()}");                     
                         break;
                     case 6:
-                        Console.WriteLine("Sua xe theo bien so");
+                        Console.WriteLine("\n Sua xe theo bien so");
                         SuaXe();
                         break;
                     case 7:
@@ -143,14 +143,14 @@ namespace Nhom16_OOP
             int n;
             do
             {
-                Console.WriteLine("Nhap 1 de tim theo bien so:");
-                Console.WriteLine("Nhap 2 de tim theo toc do:");
-                Console.WriteLine("Nhap 3 de tim theo hang:");
+                Console.WriteLine("1. Tim theo bien so:");
+                Console.WriteLine("2. Tim theo toc do:");
+                Console.WriteLine("3. Tim theo hang:");
                 n = int.Parse(Console.ReadLine());
             } while (n < 1 && n > 5);
             if (n == 1)
             {
-                Console.Write("nhap bien so:");
+                Console.Write("\nNhap bien so:");
                 string k=Convert.ToString(Console.ReadLine());
                 var t=new Table();
                 t.SetHeaders("Bien so", "Hang", "Toc do", "Trong tai","So ghe");
@@ -166,7 +166,7 @@ namespace Nhom16_OOP
             }
             if (n == 2)
             {
-                Console.Write("Nhap toc do:");
+                Console.Write("\nNhap toc do:");
                 double k = double.Parse(Console.ReadLine());
                 var t = new Table();
                 t.SetHeaders("Bien so", "Hang", "Toc do", "Trong tai","So ghe");
@@ -183,7 +183,7 @@ namespace Nhom16_OOP
             }
             if (n == 3)
             {
-                Console.Write("Nhap hang:");
+                Console.Write("\nNhap hang:");
                 string k = Convert.ToString(Console.ReadLine());
                 var t = new Table();
                 t.SetHeaders("Bien so", "Hang", "Toc do", "Trong tai","So ghe");
@@ -201,30 +201,30 @@ namespace Nhom16_OOP
         //xoa xe theo yeu cau
         public static void Delete()
         {
-            Console.WriteLine("Nhap 1 de xoa theo bien so");
-            Console.WriteLine("Nhap 2 de xoa theo toc do");
-            Console.WriteLine("Nhap 3 de xoa theo hang");
+            Console.WriteLine("1. Xoa theo bien so");
+            Console.WriteLine("2. Xoa theo toc do");
+            Console.WriteLine("3. Xoa theo hang");
             int k=int.Parse(Console.ReadLine());
             if (k == 1)
             {
                 Console.Write("Nhap bien so:");
                 string t = Convert.ToString(Console.ReadLine());
                 listxe.RemoveAll(l => l.BienSo == t);
-                Console.WriteLine("Xoa xe thanh cong");
+                Console.WriteLine("\nXoa xe thanh cong!");
             }
             if(k == 2)
             {
                 Console.WriteLine("Nhap toc do");
                 double a=double.Parse(Console.ReadLine());
                 listxe.RemoveAll(l=>l.TocDo == a);
-                Console.WriteLine("Xoa xe thanh cong");
+                Console.WriteLine("\nXoa xe thanh cong!");
             }
             if (k == 3)
             {
                 Console.Write("Nhap hang:");
                 string t = Convert.ToString(Console.ReadLine());
                 listxe.RemoveAll(l => l.Hang == t);
-                Console.WriteLine("Xoa xe thanh cong");
+                Console.WriteLine("\nXoa xe thanh cong!");
             }
 
         }
@@ -247,7 +247,7 @@ namespace Nhom16_OOP
                     xt.TocDo=double.Parse(Console.ReadLine());
                 }
             }
-            if(t==false) Console.WriteLine("Khong tim thay xe");
+            if(t==false) Console.WriteLine("\nKhong tim thay xe!");
         }
 
         
