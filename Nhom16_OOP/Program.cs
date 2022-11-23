@@ -216,6 +216,10 @@ namespace Nhom16_OOP
                     if(x.BienSo.ToString() == t)
                     {
                         z = true;
+                        if (x.XuatSoGhe() == "")
+                            XeTai.SoLuongXeTai--;
+                        else
+                            XeKhach.SoLuongXeKhach--;
                     }    
                 }
                 listxe.RemoveAll(l => l.BienSo == t);
@@ -235,6 +239,10 @@ namespace Nhom16_OOP
                     if(x.TocDo== a)
                     {
                         b = true;
+                        if (x.XuatSoGhe() == "")
+                            XeTai.SoLuongXeTai--;
+                        else
+                            XeKhach.SoLuongXeKhach--;
                     }
                 }
                 listxe.RemoveAll(l => l.TocDo == a);
@@ -253,6 +261,10 @@ namespace Nhom16_OOP
                     if (x.Hang == t)
                     {
                         z=true;
+                        if (x.XuatSoGhe() == "")
+                            XeTai.SoLuongXeTai--;
+                        else
+                            XeKhach.SoLuongXeKhach--;
                     }
                 }
                 listxe.RemoveAll(l => l.Hang == t);
