@@ -89,7 +89,6 @@ namespace Nhom16_OOP
                         Console.WriteLine("\n Hien thi danh sach xe");
                         Console.WriteLine("\n Danh sach xe");
                         DanhSachXe();
-                        
                         break;
                     default:
                         bol = false;
@@ -211,22 +210,57 @@ namespace Nhom16_OOP
             {
                 Console.Write("Nhap bien so:");
                 string t = Convert.ToString(Console.ReadLine());
+                bool z = false;
+                foreach(Xe x in listxe)
+                {
+                    if(x.BienSo.ToString() == t)
+                    {
+                        z = true;
+                    }    
+                }
                 listxe.RemoveAll(l => l.BienSo == t);
-                Console.WriteLine("\nXoa xe thanh cong!");
+                if (z== true)
+                    Console.WriteLine("\nXoa xe thanh cong!");
+                else
+                    Console.WriteLine("\nXoa xe khong thanh cong");
+
             }
             if(k == 2)
             {
                 Console.WriteLine("Nhap toc do");
                 double a=double.Parse(Console.ReadLine());
-                listxe.RemoveAll(l=>l.TocDo == a);
-                Console.WriteLine("\nXoa xe thanh cong!");
+                bool b=false;
+                foreach(Xe x in listxe)
+                {
+                    if(x.TocDo== a)
+                    {
+                        b = true;
+                    }
+                }
+                listxe.RemoveAll(l => l.TocDo == a);
+                if (b== true)
+                    Console.WriteLine("\nXoa xe thanh cong!");
+                else
+                    Console.WriteLine("\nXoa xe khong thanh cong");
             }
             if (k == 3)
             {
                 Console.Write("Nhap hang:");
                 string t = Convert.ToString(Console.ReadLine());
+                bool z = false;
+                foreach(Xe x in listxe)
+                {
+                    if (x.Hang == t)
+                    {
+                        z=true;
+                    }
+                }
                 listxe.RemoveAll(l => l.Hang == t);
-                Console.WriteLine("\nXoa xe thanh cong!");
+                if (z== true)
+                    Console.WriteLine("\nXoa xe thanh cong!");
+                else
+                    Console.WriteLine("\nXoa xe khong thanh cong");
+
             }
 
         }
