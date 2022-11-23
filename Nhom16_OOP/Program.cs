@@ -190,7 +190,7 @@ namespace Nhom16_OOP
                 t.SetHeaders("Bien so", "Hang", "Toc do", "Trong tai","So ghe");
                 foreach (Xe x in listxe)
                 {
-                    if (x.Hang.ToString() == k)
+                    if (x.Hang.ToString().ToUpper() == k.ToUpper())
                     {
                         t.AddRow(x.BienSo, x.Hang, x.TocDo.ToString(), x.XuatTrongTai(),x.XuatSoGhe());
                     }

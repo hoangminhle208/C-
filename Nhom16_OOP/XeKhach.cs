@@ -41,19 +41,23 @@ namespace Nhom16_OOP
             base.Xuat1Xe();
             Console.WriteLine("So ghe cua xe {0} ghe", SoGhe);
         }
+        //ghi de ham ao 
         public override int Dem()
         {
             return SoLuongXeKhach;
         }
+        //ghi de ham ao
         public override void ThongKe()
         {
             string k=$"So xe khach: {Dem()}";
             Console.WriteLine(k);
         }
+        //ghi de ham ao
         public override string XuatSoGhe()
         {
             return $"{SoGhe}";
         }
+        //ghi de ham ao
         public override string XuatTrongTai()
         {
             return "";

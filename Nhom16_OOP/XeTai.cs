@@ -41,20 +41,23 @@ namespace Nhom16_OOP
             base.Xuat1Xe();
             Console.WriteLine("Trong tai cua xe {0} tan",TrongTai);
         }
-        //ham dem so luong
+        //ham dem so luong - ghi de
         public override int Dem()
         {
             return SoLuongXeTai;
         }
+        //ghi de ham ao
         public override void ThongKe()
         {
             string k=$"So xe tai: {Dem()}";
             Console.WriteLine(k);
         }
+        //ghi de ham ao
         public override string XuatTrongTai()
         {
             return $"{TrongTai}";
         }
+        //ghi de ham ao
         public override string XuatSoGhe()
         {
             return "";
