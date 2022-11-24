@@ -51,7 +51,7 @@ namespace Nhom16_OOP
                 Console.WriteLine("**  5. Thong ke.                                     **");
                 Console.WriteLine("**  6. Sua xe theo bien so.                          **");
                 Console.WriteLine("**  7. Hien thi danh sach xe.                        **");
-                Console.WriteLine("**  0. Thoat                                         **");
+                Console.WriteLine("**  0. Thoat.                                        **");
                 Console.WriteLine("*******************************************************");
                 Console.Write("\tNhap tuy chon: ");
                 int key = Convert.ToInt32(Console.ReadLine());
@@ -226,7 +226,7 @@ namespace Nhom16_OOP
                 if (z== true)
                     Console.WriteLine("\nXoa xe thanh cong!");
                 else
-                    Console.WriteLine("\nXoa xe khong thanh cong");
+                    Console.WriteLine("\nXoa xe khong thanh cong!");
 
             }
             if(k == 2)
@@ -249,7 +249,7 @@ namespace Nhom16_OOP
                 if (b== true)
                     Console.WriteLine("\nXoa xe thanh cong!");
                 else
-                    Console.WriteLine("\nXoa xe khong thanh cong");
+                    Console.WriteLine("\nXoa xe khong thanh cong!");
             }
             if (k == 3)
             {
@@ -258,7 +258,7 @@ namespace Nhom16_OOP
                 bool z = false;
                 foreach(Xe x in listxe)
                 {
-                    if (x.Hang == t)
+                    if (x.Hang.ToUpper() == t.ToUpper())
                     {
                         z=true;
                         if (x.XuatSoGhe() == "")
@@ -267,11 +267,11 @@ namespace Nhom16_OOP
                             XeKhach.SoLuongXeKhach--;
                     }
                 }
-                listxe.RemoveAll(l => l.Hang == t);
+                listxe.RemoveAll(l => l.Hang.ToUpper() == t.ToUpper());
                 if (z== true)
                     Console.WriteLine("\nXoa xe thanh cong!");
                 else
-                    Console.WriteLine("\nXoa xe khong thanh cong");
+                    Console.WriteLine("\nXoa xe khong thanh cong!");
 
             }
 
